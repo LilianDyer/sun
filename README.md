@@ -2,7 +2,7 @@
 
 In this exercise we are going to practice creating a presentational component that will display a list of courses with the ability to add, edit, and delete courses to the list. 
 
-Setup
+Setup - You can either go through these steps or just download this repo and then run npm install
 
 step 1: run npx create-nx-workspace@latest (more info here: https://nx.dev/angular/tutorial/01-create-application)
 
