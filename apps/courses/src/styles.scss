@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { 
+    height: 100%; 
+}
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    display: flex;
+ }
+ p{
+     margin: 16px;
+ }
+.courses-containers {
+    display: flex;
+    justify-content: space-around;
+
+    .courses-list {
+        width: 49%;
+    }
+
+    .course-details {
+        width: 49%;
+    }
+}
+
+.container {
+    margin: 10px;
+    flex-wrap: wrap;
+}
+
+.mat-card-header-text{
+    margin-left: 0;
+    border-bottom: 1px solid #ffd740;
+}
+
+
+
+mat-list-item:not(:first-of-type) {
+    border-top: 1px solid #efefef;
+}
+
+mat-card-actions {
+    margin-bottom: 0;
+}

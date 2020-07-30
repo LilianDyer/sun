@@ -25,7 +25,10 @@
               "apps/courses/src/favicon.ico",
               "apps/courses/src/assets"
             ],
-            "styles": ["apps/courses/src/styles.scss"],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "apps/courses/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -83,7 +86,10 @@
               "apps/courses/tsconfig.app.json",
               "apps/courses/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/courses/**/*"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/courses/**/*"
+            ]
           }
         },
         "test": {
@@ -118,8 +124,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/courses-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/courses-e2e/**/*"]
+            "tsConfig": [
+              "apps/courses-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/courses-e2e/**/*"
+            ]
           }
         }
       }
