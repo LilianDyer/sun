@@ -22,10 +22,29 @@ describe('CoursesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CoursesComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
+    fixture.detectChanges(); //runs ngOnInit() the first time
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it(`should have as title 'Semester One Courses'`, () => {
+    expect(component.title).toEqual('List of Courses');
+  });
+  it('should render title', () => {
+    const compiled = fixture.nativeElement;
+    expect(compiled.querySelector('#title').textContent).toContain(
+      'List of Courses'
+    );
+  });
+
+  it('should have a list', () => {
+    expect(component.list.length).toEqual(1);
+  });
+
+  it('should render a list of 1 element', () => {
+    const el = fixture.nativeElement;
+    expect(el.querySelector('#list').textContent).toContain(
+      'Angular 101'); 
   });
 });
