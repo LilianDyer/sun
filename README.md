@@ -8,7 +8,6 @@ Dependency:
 
 Setup - You can either go through these steps or just download this repo and then run npm install
 
-
 step 1: run npx create-nx-workspace@latest (more info here: https://nx.dev/angular/tutorial/01-create-application)
 
 step 2: answer questions: 
