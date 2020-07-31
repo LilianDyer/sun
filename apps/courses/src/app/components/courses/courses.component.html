@@ -2,12 +2,16 @@
   <div class="courses-list">
     <mat-card class="course-card">
         <mat-card-header>
-            <mat-card-title>Title</mat-card-title>
+            <mat-card-title id="title">{{title}}</mat-card-title>
             
         </mat-card-header>
         
         <mat-card-content>
-            List of courses go here
+           <mat-list  id="list" dense>
+               <mat-list-item *ngFor="let item of list">
+                   {{item}}
+               </mat-list-item>
+           </mat-list>
         </mat-card-content>           
     </mat-card>
   </div>

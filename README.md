@@ -2,15 +2,26 @@
 
 In this exercise we are going to practice creating a presentational component that will display a list of courses with the ability to add, edit, and delete courses to the list. 
 
+Dependency: 
+
+        Download and install Node.js here: https://nodejs.org/en/download/ for Windows or for Mac 
+
 Setup - You can either go through these steps or just download this repo and then run npm install
 
 step 1: run npx create-nx-workspace@latest (more info here: https://nx.dev/angular/tutorial/01-create-application)
 
-step 2: answer questions: Workspace name any-name
+step 2: answer questions: 
+
+        Workspace name any-name
+
         What to create in the new workspace: angular
+
         Application name: courses
+
         Default stylesheet format: scss
+
         Use the free tier...: No
+
         This will create a sandbox with nx. It takes a few minutes to get it all ready. It will install jest and cypress for testing
 
 step 3: cd to your workspace
@@ -21,7 +32,7 @@ step 5: create a new component - nx generate @nrwl/angular:component components/
 
 step 6: nx test 
 
-step 7: material.angular.io and explore components, notice the arrow top right corner, it goes to stackblitz
+step 7: go to material.angular.io and explore components, notice the arrow top right corner, it goes to stackblitz
 
 step 8: ng add @angular/material if you don't already have it
 
