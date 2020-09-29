@@ -2,7 +2,7 @@
 
 Setup: You will need to have installed Visual Studio Code or any editor of your choice
 
-1. Choose the Branch:  Component-testing-kata and clone it
+1. Choose the Branch:  Component-testing-kata and clone it:  git clone --branch component-testing-kata https://github.com/LilianDyer/sun.git
 2. Run npm install
 3. Write missing tests for courses and courses-details components
 4. Refer to quotes and quotes-details components for sample tests
