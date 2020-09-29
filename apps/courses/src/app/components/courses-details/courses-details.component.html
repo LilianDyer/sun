@@ -1,0 +1,51 @@
+<div class="course-details">
+  <mat-card>
+     <mat-card-header>
+         <mat-card-title>Select Course</mat-card-title>
+     </mat-card-header>
+    <form #form="ngForm" (submit)="saveCourse()">
+         <mat-card-content>
+             <mat-form-field>
+                 <input matInput placeholder="Title"
+                 type="text" name="title"
+                 [(ngModel)]="selectedCourse.title"
+                 required
+                 />
+             </mat-form-field>
+             <mat-form-field>
+               <input matInput placeholder="Description"
+               type="text" name="description"
+               [(ngModel)]="selectedCourse.description"
+               
+               />
+           </mat-form-field>
+           <section class="full-width">
+               <h4>{{ selectedCourse.percentComplete }}% complete</h4>
+               <mat-slider
+                 class="full-width"
+                 [(ngModel)]="selectedCourse.percentComplete"
+                 min="0"
+                 max="100"
+                 step="1"
+                 thumbLabel
+                 name="percentComplete"
+               ></mat-slider>
+             </section>
+             <section>
+               <mat-checkbox
+                 [(ngModel)]="selectedCourse.favorite"
+                 color="primary"
+                 name="favorite"
+                 >Favorite</mat-checkbox
+               >
+             </section>
+         </mat-card-content>
+         <mat-card-actions>
+             <button [disabled]="form.invalid" type="submit" mat-button color="primary">Submit</button>
+             <button type="button" mat-button (click)="cancelCourse()">
+                 Cancel
+                 </button>
+         </mat-card-actions>
+     </form>
+ </mat-card> 
+</div> 

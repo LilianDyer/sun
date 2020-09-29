@@ -28,6 +28,12 @@
     "courses-e2e": {
       "tags": [],
       "implicitDependencies": ["courses"]
+    },
+    "data": {
+      "tags": []
+    },
+    "ui": {
+      "tags": []
     }
   }
 }

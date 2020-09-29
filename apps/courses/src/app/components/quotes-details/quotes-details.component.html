@@ -1,0 +1,61 @@
+<div class="course-details">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Quote Details</mat-card-title>
+    </mat-card-header>
+    <form #form="ngForm" (submit)="saveQuote()">
+      <mat-card-content>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Book Title"
+            type="text"
+            name="book"
+            [(ngModel)]="selectedQuote.book"
+            required
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Author"
+            type="text"
+            name="author"
+            [(ngModel)]="selectedQuote.author"
+          />
+        </mat-form-field>
+        <mat-form-field>
+          <input
+            matInput
+            placeholder="Quote"
+            type="text"
+            name="quote"
+            [(ngModel)]="selectedQuote.quote"
+          />
+        </mat-form-field>
+
+        <section>
+          <mat-checkbox
+            [(ngModel)]="selectedQuote.favorite"
+            color="primary"
+            name="favorite"
+            >Favorite</mat-checkbox
+          >
+        </section>
+      </mat-card-content>
+      <mat-card-actions>
+        <button
+          [disabled]="form.invalid"
+          type="submit"
+          mat-button
+          color="primary"
+        >
+          Submit
+        </button>
+        <button type="button" mat-button (click)="cancelQuote()">
+          Cancel
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

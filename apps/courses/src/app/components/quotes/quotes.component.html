@@ -1,0 +1,35 @@
+<div class="courses-containers">
+  <div class="courses-list">
+    <mat-card class="course-card">
+      <mat-card-header>
+        <mat-card-title id="quotesTitle">{{ title }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-list id="quotes" dense>
+          <mat-list-item
+            *ngFor="let quote of quotes"
+            (click)="selectQuote(quote)"
+          >
+            <h3 matLine>{{ quote.book }}</h3>
+            <p matLine>{{ quote.quote }}</p>
+            <button
+              mat-icon-button
+              color="warn"
+              (click)="
+                deleteQuote(quote.id); $event.stopImmediatePropagation()
+              "
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </mat-list-item>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <sun-quotes-details
+    [selectedQuote]="selectedQuote"
+    (quoteCancelled)="cancelQuote()"
+  ></sun-quotes-details>
+</div>

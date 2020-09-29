@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Semester One Courses';
+  links = [
+    { path: '/courses', icon: 'view-list', title: 'Courses' }
+  ];
+
+  constructor() { }
 }

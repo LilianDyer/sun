@@ -2,6 +2,9 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { MaterialModule } from './material.module';
+import { AppRoutingModule } from '../app/app-routing.module';
+import { RouterModule } from '@angular/router';
+
 
 
 describe('AppComponent', () => {
@@ -12,7 +15,9 @@ describe('AppComponent', () => {
         CoursesComponent
       ],
       imports: [
-        MaterialModule
+        MaterialModule,
+        AppRoutingModule,
+        RouterModule
       ]
     }).compileComponents();
   }));
@@ -22,19 +27,5 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-//isolated test
-  it(`should have as title 'Semester One Courses'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('Semester One Courses');
-  });
-//shallow test
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain(
-      'Welcome to Semester One Courses!'
-    );
-  });
+
 });
