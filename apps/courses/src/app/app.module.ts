@@ -18,7 +18,6 @@ import { LessonsService } from './shared/services/lessons/lessons.service';
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './components/courses/courses.component';
 import { CoursesDetailsComponent } from './components/courses-details/courses-details.component';
-import { LoginComponent } from './login/login.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { QuotesDetailsComponent } from './components/quotes-details/quotes-details.component';
 
@@ -27,7 +26,6 @@ import { QuotesDetailsComponent } from './components/quotes-details/quotes-detai
     AppComponent,
     CoursesComponent,
     CoursesDetailsComponent,
-    LoginComponent,
     QuotesComponent,
     QuotesDetailsComponent,
   ],

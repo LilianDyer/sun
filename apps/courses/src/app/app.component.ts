@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'Semester One Courses';
+  title = 'Coding Exercises';
   links = [
     { path: '/courses', icon: 'view-list', title: 'Courses' }
   ];
