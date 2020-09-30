@@ -25,13 +25,13 @@
           />
         </mat-form-field>
         <mat-form-field>
-          <input
+          <mat-label>Quote</mat-label>
+          <textarea
             matInput
-            placeholder="Quote"
-            type="text"
             name="quote"
+            placeholder="It could be long..."
             [(ngModel)]="selectedQuote.quote"
-          />
+          ></textarea>
         </mat-form-field>
 
         <section>

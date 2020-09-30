@@ -4,16 +4,15 @@ import { MaterialModule } from '../../material.module';
 
 import { QuotesDetailsComponent } from './quotes-details.component';
 
-describe('ClassicQuotesComponent', () => {
+describe('QuotesDetailsComponent', () => {
   let component: QuotesDetailsComponent;
   let fixture: ComponentFixture<QuotesDetailsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuotesDetailsComponent ],
+      declarations: [QuotesDetailsComponent],
       imports: [MaterialModule, FormsModule],
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

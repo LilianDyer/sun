@@ -10,19 +10,17 @@ describe('QuotesComponent', () => {
   let component: QuotesComponent;
   let fixture: ComponentFixture<QuotesComponent>;
   let quotesService: jest.Mocked<ClassicQuotesService>;
-  
+
   quotesService = {
-    getAll: jest.fn() as Function
+    getAll: jest.fn() as Function,
   } as jest.Mocked<ClassicQuotesService>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ QuotesComponent, MockComponent(QuotesDetailsComponent) ],
+      declarations: [QuotesComponent, MockComponent(QuotesDetailsComponent)],
+      providers: [{ provide: ClassicQuotesService, useValue: quotesService }],
       imports: [MaterialModule],
-      providers: [
-        { provide: ClassicQuotesService, useValue: quotesService }]
-    })
-    .compileComponents();
+    }).compileComponents();
   }));
 
   beforeEach(() => {

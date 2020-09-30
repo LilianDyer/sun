@@ -4,21 +4,19 @@ import { CoursesComponent } from './components/courses/courses.component';
 import { MaterialModule } from './material.module';
 import { AppRoutingModule } from '../app/app-routing.module';
 import { RouterModule } from '@angular/router';
-
-
+import { FormsModule } from '@angular/forms';
+import { MockComponent } from 'ng-mocks';
+import { QuotesComponent } from './components/quotes/quotes.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        CoursesComponent
+        MockComponent(CoursesComponent),
+        MockComponent(QuotesComponent),
       ],
-      imports: [
-        MaterialModule,
-        AppRoutingModule,
-        RouterModule
-      ]
+      imports: [MaterialModule, AppRoutingModule, RouterModule, FormsModule],
     }).compileComponents();
   }));
 
@@ -27,5 +25,4 @@ describe('AppComponent', () => {
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
-
 });

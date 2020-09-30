@@ -4,10 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { DataModule } from '@sun/data';
 import { FormsModule } from '@angular/forms';
 import { LayoutModule } from '@angular/cdk/layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatListModule } from '@angular/material/list';
-import { MatToolbarModule } from '@angular/material/toolbar';
 import { MaterialModule } from './material.module';
 import { NgModule } from '@angular/core';
 
@@ -36,10 +32,6 @@ import { QuotesDetailsComponent } from './components/quotes-details/quotes-detai
     DataModule,
     FormsModule,
     LayoutModule,
-    MatButtonModule,
-    MatIconModule,
-    MatListModule,
-    MatToolbarModule,
     MaterialModule,
   ],
   providers: [CoursesService, ClassicQuotesService, LessonsService],
