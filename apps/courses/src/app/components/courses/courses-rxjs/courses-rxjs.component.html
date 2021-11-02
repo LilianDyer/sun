@@ -1,0 +1,34 @@
+<div class="courses-containers">
+  <div class="courses-list">
+    <mat-card class="course-card">
+      <mat-card-header>
+        <mat-card-title id="title">{{ title }}</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        <mat-list id="list" dense>
+          <div *ngIf="list$ | async as list">
+            <mat-list-item *ngFor="let item of list">
+              {{ item }}
+            </mat-list-item>
+          </div>
+        </mat-list>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="course-details">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Title</mat-card-title>
+      </mat-card-header>
+
+      <mat-card-content>
+        One course details go here
+      </mat-card-content>
+      <!-- <mat-card-actions align="start">
+              <button mat-button (click)="onAction1">Action1</button>
+              
+          </mat-card-actions> -->
+    </mat-card>
+  </div>
+</div>

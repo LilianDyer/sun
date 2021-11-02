@@ -5,7 +5,16 @@
             <mat-card-title id="title">{{title}}</mat-card-title>
             
         </mat-card-header>
-        
+        <mat-form-field>
+            <input
+              matInput
+              placeholder="Title"
+              type="text"
+              name="course"
+              [(ngModel)]="course"
+            />
+          </mat-form-field>
+        <button mat-button (click)="onClickArray()">Add Course</button>        
         <mat-card-content>
            <mat-list  id="list" dense>
                <mat-list-item *ngFor="let item of list">
